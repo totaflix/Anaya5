@@ -1973,7 +1973,10 @@ async def auto_filter(client, msg, spoll=False):
             return
         if len(message.text) < 100:
             search = message.text
-            m=await message.reply_text(f"<b><i> 𝖲𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖿𝗈𝗋 '{search}' 🔎</i></b>")
+            btn = [[
+                    InlineKeyboardButton(f"Searching  🔍  for {search}", url=CHNL_LNK)
+                    ]]
+            dlt = await message.reply_sticker('CAACAgQAAxkBAAJmcmWH4F2JtnTYhn5sQDZDYdC0tUPgAAL6FgACpvFxHkyKzYENX-WBHgQ', reply_markup=InlineKeyboardMarkup(btn))
             search = search.lower()
             find = search.split(" ")
             search = ""
@@ -2004,7 +2007,10 @@ async def auto_filter(client, msg, spoll=False):
     else:
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
-        m=await message.reply_text(f"<b><i> 𝖲𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖿𝗈𝗋 '{search}' 🔎</i></b>")
+        btn = [[
+                    InlineKeyboardButton(f"Searching  🔍  for {search}", url=CHNL_LNK)
+                    ]]
+        dlt = await message.reply_sticker('CAACAgQAAxkBAAJmcmWH4F2JtnTYhn5sQDZDYdC0tUPgAAL6FgACpvFxHkyKzYENX-WBHgQ', reply_markup=InlineKeyboardMarkup(btn))
         settings = await get_settings(message.chat.id)
         await msg.message.delete()
     # if 'is_shortlink' in settings.keys():
@@ -2077,6 +2083,17 @@ async def auto_filter(client, msg, spoll=False):
     #     ])
     else:
         btn = []
+        btn.insert(0, 
+            [
+                InlineKeyboardButton(f'Sᴇʟᴇᴄᴛ ➢', 'select'),
+                InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                InlineKeyboardButton("Sᴇᴀsᴏɴs", callback_data=f"seasons#{key}")
+            ]
+        )
+        btn.insert(0, [
+            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
+            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+        ])
     if offset != "":
         req = message.from_user.id if message.from_user else 0
         try:
