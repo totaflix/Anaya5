@@ -1982,7 +1982,7 @@ async def auto_filter(client, msg, spoll=False):
                     InlineKeyboardButton(f"Searching  🔍  for {search}", url=CHNL_LNK)
                     ]]
             t = await message.reply_sticker('CAACAgQAAxkBAAJmcmWH4F2JtnTYhn5sQDZDYdC0tUPgAAL6FgACpvFxHkyKzYENX-WBHgQ', reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(1)
+            await asyncio.sleep(5)
             await t.delete()
             search = search.lower()
             find = search.split(" ")
@@ -2018,7 +2018,7 @@ async def auto_filter(client, msg, spoll=False):
                     InlineKeyboardButton(f"Searching  🔍  for {search}", url=CHNL_LNK)
                     ]]
         dlt = await message.reply_sticker('CAACAgQAAxkBAAJmcmWH4F2JtnTYhn5sQDZDYdC0tUPgAAL6FgACpvFxHkyKzYENX-WBHgQ', reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(1)
+        await asyncio.sleep(5)
         await dlt.delete()
         settings = await get_settings(message.chat.id)
         await msg.message.delete()
