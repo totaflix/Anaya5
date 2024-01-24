@@ -55,7 +55,7 @@ async def start(client, message):
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAELPK1lr5d-Uz28GOd_2ktBnSprpH1AIAAC-xAAAm5AYiptvgFrTJZ6TTQE") 
-        await asyncio.sleep(1)
+        await asyncio.sleep(5)
         await m.delete()
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -153,7 +153,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/hbbotz')
+                          InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/TamilMovies4K')
                          ]
                         ]
                     )
@@ -169,7 +169,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/hbbotz')
+                          InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/TamilMovies4K')
                          ]
                         ]
                     )
@@ -330,7 +330,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/hbbotz')
+                      InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/TamilMovies4K')
                      ]
                     ]
                 )
@@ -389,7 +389,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/hbbotz')
+                      InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/TamilMovies4K')
                      ]
                     ]
                 )
@@ -446,7 +446,7 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
              [
-              InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/hbbotz')
+              InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/TamilMovies4K')
              ]
             ]
         )
