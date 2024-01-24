@@ -1,17 +1,5 @@
-Fsub channel
-
-1574509460
-
-Data base
-
--1001751333376 -1001617983422
-
-Log channel
-
-1566660231
-
-Bot token 6737695369:AAGqWBEmkCW9Z5VdGBsZvWP6KhhnkFDgsWg
-
-Mongo
-
-mongodb+srv://BooksBot:BooksBot@cluster0.qtujn.mongodb.net/?retryWrites=true&w=majority
+#AUTH_CHANNEL -1001574509460
+#CHANNELS : -1001751333376 -1001617983422
+#LOG_CHANNEL : -1001566660231
+# BOT_TOKEN : 6737695369:AAGqWBEmkCW9Z5VdGBsZvWP6KhhnkFDgsWg
+# DATABASE_URI : mongodb+srv://BooksBot:BooksBot@cluster0.qtujn.mongodb.net/?retryWrites=true&w=majority
