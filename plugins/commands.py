@@ -28,7 +28,7 @@ async def start(client, message):
                     InlineKeyboardButton('🧑‍💻 Oᴡɴᴇʀ', callback_data= "owner_info"),
                     InlineKeyboardButton('🌿 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', callback_data='money_bot')
                  ],[
-                    InlineKeyboardButton('💰 Eᴀʀɴ Mᴏɴᴇʏ Wɪᴛʜ Mᴇ 💸', callback_data="shortlink_info")
+                    InlineKeyboardButton('👀ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴍᴇ 🤔', callback_data="shortlink_info")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
@@ -51,7 +51,7 @@ async def start(client, message):
                     InlineKeyboardButton('👻 Hᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('👾 Aʙᴏᴜᴛ', callback_data='about')
                  ],[
-                    InlineKeyboardButton('💰 Eᴀʀɴ Mᴏɴᴇʏ Wɪᴛʜ Mᴇ 💸', callback_data="shortlink_info")
+                    InlineKeyboardButton('👀ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴍᴇ 🤔', callback_data="shortlink_info")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAELPK1lr5d-Uz28GOd_2ktBnSprpH1AIAAC-xAAAm5AYiptvgFrTJZ6TTQE") 
@@ -73,7 +73,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "❆ Jᴏɪɴ Oᴜʀ Cʜᴀɴɴᴇʟ ❆", url=invite_link.invite_link
+                    "🎖 Jᴏɪɴ Oᴜʀ ᴍᴀɪɴ Cʜᴀɴɴᴇʟ 📢", url=invite_link.invite_link
                 )
             ]
         ]
@@ -87,7 +87,7 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**You are not in our channel given below so you don't get the movie file...\n\nIf you want the ʙᴏᴏᴋꜱ, click on the '📚ᴊᴏɪɴ ᴏᴜʀ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ📚' button below and join our back-up channel, then click on the '🔄 Try Again' button below...\n\nThen you will get the movie files...**",
+            text="**You are not in our channel given below so you don't get the Book file...\n\nIf you want the ʙᴏᴏᴋꜱ, click on the '🎖 Jᴏɪɴ Oᴜʀ ᴍᴀɪɴ Cʜᴀɴɴᴇʟ 📢' button below and join our ᴍᴀɪɴ channel, then click on the '🔄 Try Again' button below...\n\nThen you will get the Books\n\nகீழே கொடுக்கப்பட்டுள்ள எங்கள் சேனலில் நீங்கள் இல்லாததால் புத்தகக் கோப்பைப் பெறவில்லை...\n\nஉங்களுக்கு புத்தகங்கள் தேவைப்பட்டால், கீழே உள்ள '🎖 Jᴏɪɴ Oᴜʀ ᴍᴀɪɴ Cʜᴀɴɴᴇʟ 📢' பொத்தானைக் கிளிக் செய்து, எங்கள் முதன்மை சேனலில் சேரவும், பின்னர் கீழே உள்ள '🔄 Try Again' பொத்தானைக் கிளிக் செய்யவும்...\n\nபின்னர் நீங்கள் புத்தகக் கோப்புகளைப் பெறுவீர்கள்...**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
@@ -102,7 +102,7 @@ async def start(client, message):
                     InlineKeyboardButton('👻 Hᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('👾 Aʙᴏᴜᴛ', callback_data='about')
                  ],[
-                    InlineKeyboardButton('💰 Eᴀʀɴ Mᴏɴᴇʏ Wɪᴛʜ Mᴇ 💸', callback_data="shortlink_info")
+                    InlineKeyboardButton('👀ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴍᴇ 🤔', callback_data="shortlink_info")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
