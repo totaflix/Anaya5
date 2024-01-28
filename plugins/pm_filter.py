@@ -332,7 +332,7 @@ async def languages_cb_handler(client: Client, query: CallbackQuery):
     try:
         if int(query.from_user.id) not in [query.message.reply_to_message.from_user.id, 0]:
             return await query.answer(
-                f"⚠️ ʜᴇʟʟᴏ{query.from_user.first_name},\nᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ,\nʀᴇQᴜᴇꜱᴛ ʏᴏᴜʀ'ꜱ...",
+                f"⚠️ thampi🧐{query.from_user.first_name},\n 😮‍💨unna ninacha vethanaiya irukku oru book koodava sonthama theda matta 🤯...",
                 show_alert=True,
             )
     except:
@@ -1309,8 +1309,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("⚠️ Uɴᴀᴠᴀɪʟᴀʙʟᴇ ⚠️", callback_data=f"unalert#{from_user}")
               ]]
         btn2 = [[
-                 InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
-                 InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
+                 InlineKeyboardButton('📢Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
+                 InlineKeyboardButton("🏋️Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1332,10 +1332,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("✅ Uᴘʟᴏᴀᴅᴇᴅ ✅", callback_data=f"upalert#{from_user}")
               ]]
         btn2 = [[
-                 InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
-                 InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
+                 InlineKeyboardButton('📢Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
+                 InlineKeyboardButton("🏋️Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
                ],[
-                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://t.me/MoviesDiscussion24x7")
+                 InlineKeyboardButton("🔎Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ🔐", url="https://t.me/MoviesDiscussion24x7")
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1357,8 +1357,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("🟢 Aʟʀᴇᴀᴅʏ Aᴠᴀɪʟᴀʙʟᴇ 🟢", callback_data=f"alalert#{from_user}")
               ]]
         btn2 = [[
-                 InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
-                 InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
+                 InlineKeyboardButton('📢Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
+                 InlineKeyboardButton("🏋️Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
                ],[
                  InlineKeyboardButton("📚Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://t.me/TamilBookHouse")
                ]]
@@ -1419,7 +1419,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('👻 Hᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('👾 Aʙᴏᴜᴛ', callback_data='about')
                 ],[
-                    InlineKeyboardButton('💰 Eᴀʀɴ Mᴏɴᴇʏ Wɪᴛʜ Mᴇ 💸', callback_data="shortlink_info")
+                    InlineKeyboardButton('👀ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴍᴇ 🤔', callback_data="shortlink_info")
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1586,13 +1586,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ', url=f'https://t.me/TamilBots'),
-            InlineKeyboardButton('Dᴏɴᴀᴛɪᴏɴ', callback_data='source')
+            InlineKeyboardButton('📢Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ', url=f'https://t.me/TamilBots'),
+            InlineKeyboardButton('💸Dᴏɴᴀᴛɪᴏɴ', callback_data='source')
         ],[
-            InlineKeyboardButton('Rᴇᴘᴏʀᴛ Bᴜɢꜱ & Fᴇᴇᴅʙᴀᴄᴋ',url=f'https://t.me/TamilSupport')
+            InlineKeyboardButton('🆘Rᴇᴘᴏʀᴛ Bᴜɢꜱ & Fᴇᴇᴅʙᴀᴄᴋ',url=f'https://t.me/TamilSupport')
         ],[ 
-            InlineKeyboardButton('Hᴏᴍᴇ', callback_data='start'),
-            InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close_data')
+            InlineKeyboardButton('🏠Hᴏᴍᴇ', callback_data='start'),
+            InlineKeyboardButton('🚪Cʟᴏsᴇ', callback_data='close_data')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
