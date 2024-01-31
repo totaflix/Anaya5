@@ -21,6 +21,7 @@ import pytz
 from aiohttp import web
 from plugins import web_server
 from pyrogram.errors import FloodWait
+from pyrogram.errors import RPCError
 
 class Bot(Client):
 
