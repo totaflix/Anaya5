@@ -85,8 +85,9 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
                 btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
-        await client.send_message(
+        await client.send_photo(
             chat_id=message.from_user.id,
+            photo="https://telegra.ph/file/20b4aaaddb8aba646e53c.jpg",
             text="**You are not in our channel given below so you don't get the movie file...\n\nIf you want the movie file, click on the '🍿ᴊᴏɪɴ ᴏᴜʀ ʙᴀᴄᴋ-ᴜᴘ ᴄʜᴀɴɴᴇʟ🍿' button below and join our back-up channel, then click on the '🔄 Try Again' button below...\n\nThen you will get the movie files...**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
@@ -152,9 +153,15 @@ async def start(client, message):
                     protect_content=msg.get('protect', False),
                     reply_markup=InlineKeyboardMarkup(
                         [
-                         [
-                          InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/TamilMovies4K')
-                         ]
+                            [
+                                InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
+                                InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                            ],[
+                                InlineKeyboardButton('𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥', url="https://t.me/SaravanaKrish")
+                            ],
+                            [
+                                InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @TamilBots
+                            ]
                         ]
                     )
                 )
@@ -169,8 +176,13 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/TamilMovies4K')
-                         ]
+                          InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
+                          InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                       ],[
+                          InlineKeyboardButton("𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥", url="t.me/SaravanKrish")
+                         ],[ 
+                            InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @TamilBots
+                            ]
                         ]
                     )
                 )
@@ -330,7 +342,14 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/TamilMovies4K')
+                      InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
+                      InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                   ],[
+                      InlineKeyboardButton("𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥", url="t.me/Saravanakrish")
+                     ],
+                     [
+                        InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
+
                      ]
                     ]
                 )
@@ -389,7 +408,14 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/TamilMovies4K')
+                      InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
+                      InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                   ],[
+                      InlineKeyboardButton("𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥", url="t.me/Saravanakrish")
+                     ],
+                     [
+                        InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
+
                      ]
                     ]
                 )
@@ -445,12 +471,19 @@ async def start(client, message):
         protect_content=True if pre == 'filep' else False,
         reply_markup=InlineKeyboardMarkup(
             [
-             [
-              InlineKeyboardButton('🍁 Uᴘᴅᴀᴛᴇ', url=f'https://t.me/TamilMovies4K')
-             ]
-            ]
-        )
-    )
+                     [
+                      InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
+                      InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                   ],[
+                      InlineKeyboardButton("𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥", url="t.me/Saravanakrish")
+                     ],
+                     [
+                        InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
+
+                     ]
+                    ]
+                )
+            )
     btn = [[
         InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
     ]]
