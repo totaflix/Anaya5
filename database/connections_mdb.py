@@ -1,3 +1,5 @@
+# Credits @TamilBots Edited By @SaravanKrish
+
 import pymongo
 
 from info import DATABASE_URI, DATABASE_NAME
