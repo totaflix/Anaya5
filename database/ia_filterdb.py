@@ -1,5 +1,3 @@
-# Credits @TamilBots Edited By @SaravanKrish
-
 import logging
 from struct import pack
 import re
