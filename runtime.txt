@@ -1,2 +1,1 @@
-# Credits @TamilBots Edited By @SaravanKrish
 python-3.12.1
