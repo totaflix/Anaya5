@@ -2019,12 +2019,13 @@ async def auto_filter(client, msg, spoll=False):
             return
         if len(message.text) < 100:
             search = message.text
-            btn = [[
-                    InlineKeyboardButton(f"Searching  🔍  for {search}", url=CHNL_LNK)
-                    ]]
-            t = await message.reply_sticker('CAACAgQAAxkBAAJmcmWH4F2JtnTYhn5sQDZDYdC0tUPgAAL6FgACpvFxHkyKzYENX-WBHgQ', reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(5)
-            await t.delete()
+            m=await message.reply_text(f"<b><i> 𝖲𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖿𝗈𝗋 '{search}' 🔎</i></b>")
+  #          btn = [[
+  #                  InlineKeyboardButton(f"Searching  🔍  for {search}", url=CHNL_LNK)
+  #                  ]]
+  #          t = await message.reply_sticker('CAACAgQAAxkBAAJmcmWH4F2JtnTYhn5sQDZDYdC0tUPgAAL6FgACpvFxHkyKzYENX-WBHgQ', reply_markup=InlineKeyboardMarkup(btn))
+  #          await asyncio.sleep(5)
+  #          await t.delete()
             search = search.lower()
             find = search.split(" ")
             search = ""
@@ -2043,7 +2044,7 @@ async def auto_filter(client, msg, spoll=False):
             files, offset, total_results = await get_search_results(message.chat.id ,search, offset=0, filter=True)
             settings = await get_settings(message.chat.id)
             if not files:
-                await msg.delete()
+                await m.delete()
                 if settings["spell_check"]:
                     return await advantage_spell_chok(client, msg)
                 else:
@@ -2055,12 +2056,13 @@ async def auto_filter(client, msg, spoll=False):
     else:
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
-        btn = [[
-                    InlineKeyboardButton(f"Searching  🔍  for {search}", url=CHNL_LNK)
-                    ]]
-        dlt = await message.reply_sticker('CAACAgQAAxkBAAJmcmWH4F2JtnTYhn5sQDZDYdC0tUPgAAL6FgACpvFxHkyKzYENX-WBHgQ', reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(5)
-        await dlt.delete()
+        m=await message.reply_text(f"<b><i> 𝖲𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖿𝗈𝗋 '{search}' 🔎</i></b>")
+ #       btn = [[
+ #                   InlineKeyboardButton(f"Searching  🔍  for {search}", url=CHNL_LNK)
+ #                   ]]
+ #       dlt = await message.reply_sticker('CAACAgQAAxkBAAJmcmWH4F2JtnTYhn5sQDZDYdC0tUPgAAL6FgACpvFxHkyKzYENX-WBHgQ', reply_markup=InlineKeyboardMarkup(btn))
+ #       await asyncio.sleep(5)
+ #       await dlt.delete()
         settings = await get_settings(message.chat.id)
         await msg.message.delete()
     # if 'is_shortlink' in settings.keys():
