@@ -1,7 +1,6 @@
 import re
 from os import environ, getenv
 from Script import script 
-from os import environ as env
 
 id_pattern = re.compile(r'^.\d+$')
 def is_enabled(value, default):
@@ -120,12 +119,12 @@ SEASONS = ["season 1" , "season 2" , "season 3" , "season 4", "season 5" , "seas
 #else:
 #    URL = "https://anayafilterbot-tamilbots.koyeb.app/".format(FQDN)
 
-PORT = int(env.get("PORT", 8000))
-BIND_ADDRESS = str(env.get("BIND_ADDRESS", "0.0.0.0"))
-PING_INTERVAL = int(env.get("PING_INTERVAL", "1200"))
-HAS_SSL = str(env.get("HAS_SSL", "0").lower()) in ("1", "true", "t", "yes", "y")
-NO_PORT = str(env.get("NO_PORT", "0").lower()) in ("1", "true", "t", "yes", "y")
-FQDN = str(env.get("FQDN", BIND_ADDRESS))
+PORT = int(environ.get("PORT", 8000))
+BIND_ADDRESS = str(environ.get("BIND_ADDRESS", "0.0.0.0"))
+PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))
+HAS_SSL = str(environ.get("HAS_SSL", "0").lower()) in ("1", "true", "t", "yes", "y")
+NO_PORT = str(environ.get("NO_PORT", "0").lower()) in ("1", "true", "t", "yes", "y")
+FQDN = str(environ.get("FQDN", BIND_ADDRESS))
 URL = "http{}://{}{}/".format(
     "s" if HAS_SSL else "", FQDN, "" if NO_PORT else ":" + str(PORT)
 )
