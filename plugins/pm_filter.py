@@ -2058,11 +2058,11 @@ async def auto_filter(client, msg, spoll=False):
         btn = [[
                     InlineKeyboardButton(f"Searching  🔍  for {search}", url=CHNL_LNK)
                     ]]
-        m = await message.reply_sticker('CAACAgUAAxkBAAELPK1lr5d-Uz28GOd_2ktBnSprpH1AIAAC-xAAAm5AYiptvgFrTJZ6TTQE', reply_markup=InlineKeyboardMarkup(btn))
-  #      await asyncio.sleep(5)
-  #      await dlt.delete()
+        dlt = await message.reply_sticker('CAACAgUAAxkBAAELPK1lr5d-Uz28GOd_2ktBnSprpH1AIAAC-xAAAm5AYiptvgFrTJZ6TTQE', reply_markup=InlineKeyboardMarkup(btn))
+        await asyncio.sleep(5)
+        await dlt.delete()
         settings = await get_settings(message.chat.id)
-        await msg.message.delete()
+    #    await msg.message.delete()
     # if 'is_shortlink' in settings.keys():
     #     ENABLE_SHORTLINK = settings['is_shortlink']
     # else:
