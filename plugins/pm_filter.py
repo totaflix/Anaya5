@@ -1421,14 +1421,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await xo.delete()
 
             await log_msg.reply_text(
-                text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ꜰɪʟᴇ ɴᴀᴍᴇ : {fileName}"\n••**ꜱᴛʀᴇᴀᴍ ʟɪɴᴋ :** {lazy_stream}"\n ••**ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ :**{lazy_download}",
+                text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ꜰɪʟᴇ ɴᴀᴍᴇ : {fileName} \n\n••**ꜱᴛʀᴇᴀᴍ ʟɪɴᴋ :** {lazy_stream} \n\n ••**ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ :**{lazy_download}",
                 quote=True,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=lazy_download),  # we download Link
                                                     InlineKeyboardButton('🖥️ Watch online 🖥️', url=lazy_stream)]])  # web stream Link
             )
             await query.message.reply_text(
-                text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔"\n••**ꜱᴛʀᴇᴀᴍ ʟɪɴᴋ :** {lazy_stream}"\n ••**ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ :**{lazy_download}",
+                text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔"\n••**ꜱᴛʀᴇᴀᴍ ʟɪɴᴋ :** {lazy_stream} \n\n ••**ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ :**{lazy_download}",
                 quote=True,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=lazy_download),  # we download Link
