@@ -2022,9 +2022,9 @@ async def auto_filter(client, msg, spoll=False):
             btn = [[
                     InlineKeyboardButton(f"Searching  🔍  for {search}", url=CHNL_LNK)
                     ]]
-            m = await message.reply_sticker('CAACAgUAAxkBAAELPK1lr5d-Uz28GOd_2ktBnSprpH1AIAAC-xAAAm5AYiptvgFrTJZ6TTQE', reply_markup=InlineKeyboardMarkup(btn))
-#            await asyncio.sleep(5)
-#            await m.delete()
+            t = await message.reply_sticker('CAACAgUAAxkBAAELPK1lr5d-Uz28GOd_2ktBnSprpH1AIAAC-xAAAm5AYiptvgFrTJZ6TTQE', reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(5)
+            await t.delete()
             search = search.lower()
             find = search.split(" ")
             search = ""
@@ -2082,7 +2082,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"⚡[{get_size(file.file_size)}]⚡ {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
