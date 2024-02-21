@@ -2022,9 +2022,9 @@ async def auto_filter(client, msg, spoll=False):
             btn = [[
                     InlineKeyboardButton(f"Searching  🔍  for {search}", url=CHNL_LNK)
                     ]]
-            t = await message.reply_sticker('CAACAgUAAxkBAAELPK1lr5d-Uz28GOd_2ktBnSprpH1AIAAC-xAAAm5AYiptvgFrTJZ6TTQE', reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(5)
-            await t.delete()
+            m = await message.reply_sticker('CAACAgUAAxkBAAELPK1lr5d-Uz28GOd_2ktBnSprpH1AIAAC-xAAAm5AYiptvgFrTJZ6TTQE', reply_markup=InlineKeyboardMarkup(btn))
+#            await asyncio.sleep(5)
+#            await m.delete()
             search = search.lower()
             find = search.split(" ")
             search = ""
@@ -2043,7 +2043,7 @@ async def auto_filter(client, msg, spoll=False):
             files, offset, total_results = await get_search_results(message.chat.id ,search, offset=0, filter=True)
             settings = await get_settings(message.chat.id)
             if not files:
-                await message.delete()
+                await m.delete()
                 if settings["spell_check"]:
                     return await advantage_spell_chok(client, msg)
                 else:
@@ -2058,11 +2058,11 @@ async def auto_filter(client, msg, spoll=False):
         btn = [[
                     InlineKeyboardButton(f"Searching  🔍  for {search}", url=CHNL_LNK)
                     ]]
-        dlt = await message.reply_sticker('CAACAgUAAxkBAAELPK1lr5d-Uz28GOd_2ktBnSprpH1AIAAC-xAAAm5AYiptvgFrTJZ6TTQE', reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(5)
-        await dlt.delete()
+        m = await message.reply_sticker('CAACAgUAAxkBAAELPK1lr5d-Uz28GOd_2ktBnSprpH1AIAAC-xAAAm5AYiptvgFrTJZ6TTQE', reply_markup=InlineKeyboardMarkup(btn))
+  #      await asyncio.sleep(5)
+  #      await dlt.delete()
         settings = await get_settings(message.chat.id)
-#        await msg.message.delete()
+        await msg.message.delete()
     # if 'is_shortlink' in settings.keys():
     #     ENABLE_SHORTLINK = settings['is_shortlink']
     # else:
