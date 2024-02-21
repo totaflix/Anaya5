@@ -1428,7 +1428,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                                                     InlineKeyboardButton('🖥️ Watch online 🖥️', url=lazy_stream)]])  # web stream Link
             )
             await query.message.reply_text(
-                text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔"\n••**ꜱᴛʀᴇᴀᴍ ʟɪɴᴋ :** {lazy_stream} \n\n ••**ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ :**{lazy_download}",
+                text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔\n••**ꜱᴛʀᴇᴀᴍ ʟɪɴᴋ :** {lazy_stream} \n\n ••**ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ :**{lazy_download}",
                 quote=True,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=lazy_download),  # we download Link
