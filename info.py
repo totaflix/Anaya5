@@ -50,15 +50,15 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 VERIFY = bool(environ.get('IS_VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'shareus.io')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'pS2AH66rhnRQrQ0GXrrEZ9Fi7202')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'tnshort.net')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'eb0d3ac51fe147d90318fd1a3b2a9446a57bdf96')
 SECOND_SHORTLINK_URL = environ.get('SECOND_SHORTLINK_URL', 'shareus.io')
 SECOND_SHORTLINK_API = environ.get('SECOND_SHORTLINK_API', 'pS2AH66rhnRQrQ0GXrrEZ9Fi7202')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
-PORT = environ.get("PORT", "8080")
+PORT = environ.get("PORT", "8000")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/MovieDiscussion24x7')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/TamilMovies4k')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/TamilMovieChat/26')
@@ -90,36 +90,44 @@ SEASONS = ["season 1" , "season 2" , "season 3" , "season 4", "season 5" , "seas
 
 
 # Online Stream and Download
-NO_PORT = bool(environ.get('NO_PORT', False))
-APP_NAME = None
-if 'DYNO' in environ:
-    ON_HEROKU = True
-    APP_NAME = environ.get('APP_NAME')
-else:
-    ON_HEROKU = False
-BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
-FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
-URL = "https://anayafilterbot-tamilbots.koyeb.app/".format(FQDN) if ON_HEROKU or NO_PORT else \
-    "https://anayafilterbot-tamilbots.koyeb.app/".format(FQDN, PORT)
-SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
-WORKERS = int(environ.get('WORKERS', '4'))
-SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
-MULTI_CLIENT = False
-name = str(environ.get('name', 'LazyPrincess'))
-PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
-if 'DYNO' in environ:
-    ON_HEROKU = True
-    APP_NAME = str(getenv('APP_NAME'))
+#NO_PORT = bool(environ.get('NO_PORT', False))
+#APP_NAME = None
+#if 'DYNO' in environ:
+#    ON_HEROKU = True
+#    APP_NAME = environ.get('APP_NAME')
+#else:
+#    ON_HEROKU = False
+#BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
+#FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
+#URL = "https://anayafilterbot-tamilbots.koyeb.app/".format(FQDN) if ON_HEROKU or NO_PORT else \
+#    "https://anayafilterbot-tamilbots.koyeb.app/".format(FQDN, PORT)
+#SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
+#WORKERS = int(environ.get('WORKERS', '4'))
+#SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
+#MULTI_CLIENT = False
+#name = str(environ.get('name', 'LazyPrincess'))
+#PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
+#if 'DYNO' in environ:
+#    ON_HEROKU = True
+#    APP_NAME = str(getenv('APP_NAME'))
 
-else:
-    ON_HEROKU = False
-HAS_SSL=bool(getenv('HAS_SSL',False))
-if HAS_SSL:
-    URL = "https://anayafilterbot-tamilbots.koyeb.app/".format(FQDN)
-else:
-    URL = "https://anayafilterbot-tamilbots.koyeb.app/".format(FQDN)
+#else:
+#    ON_HEROKU = False
+#HAS_SSL=bool(getenv('HAS_SSL',False))
+#if HAS_SSL:
+#    URL = "https://anayafilterbot-tamilbots.koyeb.app/".format(FQDN)
+#else:
+#    URL = "https://anayafilterbot-tamilbots.koyeb.app/".format(FQDN)
 
-
+PORT = int(env.get("PORT", 8000))
+BIND_ADDRESS = str(env.get("BIND_ADDRESS", "0.0.0.0"))
+PING_INTERVAL = int(env.get("PING_INTERVAL", "1200"))
+HAS_SSL = str(env.get("HAS_SSL", "0").lower()) in ("1", "true", "t", "yes", "y")
+NO_PORT = str(env.get("NO_PORT", "0").lower()) in ("1", "true", "t", "yes", "y")
+FQDN = str(env.get("FQDN", BIND_ADDRESS))
+URL = "http{}://{}{}/".format(
+    "s" if HAS_SSL else "", FQDN, "" if NO_PORT else ":" + str(PORT)
+)
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
