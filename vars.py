@@ -8,6 +8,9 @@ load_dotenv()
 
 class Var(object):
     MULTI_CLIENT = False
+    API_ID = int(environ.get('API_ID', '1779071'))
+    API_HASH = environ.get('API_HASH', '3448177952613312689f44b9d909b5d3')
+    BOT_TOKEN = environ.get('BOT_TOKEN', "2108904435:AAHd5H11sa9BmNP7ER-jviaYiFnjrTJPLXE")
     name = str(getenv('name', 'tgmovieprobot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
