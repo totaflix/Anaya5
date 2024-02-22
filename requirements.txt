@@ -55,3 +55,6 @@ pyshorteners
 pyromod
 colorama
 openai==0.25.0
+jinja2
+Flask<= 3.0.0
+gunicorn<= 21.2.0
